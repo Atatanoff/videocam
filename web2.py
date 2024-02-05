@@ -16,8 +16,9 @@ tm = 0
 color_yellow = (0,255,255) 
 sum_clip = days_clip*24*60/len_clip
 folder_save_move = '/data/cam/'
-if os.path.isfile("config"):
-    with open("config", "r") as file:
+conf = folder_save_move+'config'
+if os.path.isfile(conf):
+    with open(conf, "r") as file:
         num_clip = int(file.read())
 else:
     num_clip=0
@@ -50,8 +51,9 @@ while cap.isOpened():
             if num_clip == sum_clip:
                 num_clip = 0
 
-with open("config","w") as fl:
-    print(num_clip, file=fl)
+            with open(conf,"w") as fl:
+                print(f"запись в конфиг {num_clip}")
+                print(num_clip, file=fl)
 
 try:
     output.release()
