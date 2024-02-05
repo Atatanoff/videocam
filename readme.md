@@ -1,6 +1,6 @@
 ```sudo mkdir -p --mode=777 /data/cam```
 ```cd /opt/```
-```sudo git clone https://github.com/Atatanoff/videocam.git'''
+```sudo git clone https://github.com/Atatanoff/videocam.git```
 ```cd videocam```
 ```sudo docker build -t webcam .```
 
