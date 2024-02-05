@@ -13,5 +13,5 @@ RUN apt-get update && apt-get install ffmpeg libsm6 libxext6  -y && mkdir -p --m
 # Обновляем pip, устанавливаем зависимости
 RUN pip install --upgrade pip && pip install --no-cache-dir -r requirements.txt
 
-CMD ["python3", "new2.py"]
+CMD ["python3", "web2.py"]
 
