@@ -15,7 +15,7 @@ days_clip = 3
 tm = 0
 color_yellow = (0,255,255) 
 sum_clip = days_clip*24*60/len_clip
-folder_save_move = '/data/cam/'
+folder_save_move = '/home/cam/'
 conf = folder_save_move+'config'
 if os.path.isfile(conf):
     with open(conf, "r") as file:
