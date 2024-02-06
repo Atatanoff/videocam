@@ -9,7 +9,7 @@ WORKDIR /opt/videocam
 # Копируем в рабочую директорию файл зависимостей
 COPY . /opt/videocam
 
-RUN apt-get update && apt-get install ffmpeg libsm6 libxext6  -y && mkdir -p --mode=777 /data/cam
+RUN apt-get update && apt-get install ffmpeg libsm6 libxext6  -y && mkdir -p --mode=777 /home/cam
 # Обновляем pip, устанавливаем зависимости
 RUN pip install --upgrade pip && pip install --no-cache-dir -r requirements.txt
 
